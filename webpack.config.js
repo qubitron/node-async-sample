@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   entry: [
     'babel-polyfill',
-    './server.js'
+    './src/server.js'
   ],
   output: {
     path: __dirname + '/dist',
@@ -17,7 +17,7 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        include: __dirname + '/src',
         loader: 'babel-loader'
       }
     ]
